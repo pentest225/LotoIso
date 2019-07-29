@@ -6,7 +6,7 @@ admin.site.site_header = "Admin Page Super Plus "
 admin.site.site_title = "Admin "
 admin.site.index_title = "Bienvenue sur la page d'administration ;)"
 
-admin.site.register(Client)
+admin.site.register(Profile)
 #@admin.register(Client)
 # class ClientAdmin (admin.ModelAdmin):
 #     # list_display = ('username' ,'email','numero','compte',)
@@ -35,8 +35,8 @@ class SportAdmin (admin.ModelAdmin):
 
 @admin.register(Math)
 class MathAdmin (admin.ModelAdmin):
-    list_display = ('date_debut' ,'date_fin','id_equip1','id_equip2','scoreEq1','scoreEq2')
-    list_filter = ("id_equip1","id_equip2",)
-    search_fields = ('id_equip1','id_equip2',)
+    list_display = ('date_debut' ,'date_fin','idEquipe1','idEquipe2','scoreEq1','scoreEq2')
+    list_filter = ("idEquipe1","idEquipe2",)
+    search_fields = ('idEquipe1','idEquipe2',)
     list_per_page = 50
-    ordering = ['id_equip1','id_equip2',]
+    ordering = ['idEquipe1','idEquipe2',]

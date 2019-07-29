@@ -1,6 +1,15 @@
 body{
+    margin-top:2%;
     color: #0e2135;
+    background-color: #0e2135;
 }
 #myCarousel{
-	height:50px;
+}
+#registerSection{
+    margin: 8% auto;
+    width: 50%;
+}
+#LoginSection{
+    margin: 10% auto;
+    width: 400px;
 }

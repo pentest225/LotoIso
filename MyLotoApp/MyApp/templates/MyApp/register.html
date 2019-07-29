@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <!-- Required meta tags always come first -->
@@ -32,7 +32,7 @@
 
 </head>
 <body>
-<!-- NAV BAR -->
+<!--NAV BAR -->
     <main id="wrapper">
       <!-- navigation -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
@@ -90,75 +90,115 @@
           </div>
         </div>
       </nav>
-
-<!-- FIN NAV BAR -->
-<!--SECTION CAROUEL -->
-<section id="myCarousel">
-<!--Carousel Wrapper-->
-<div id="carousel-example-2" class="carousel slide carousel-fade" data-ride="carousel">
-  <!--Indicators-->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-2" data-slide-to="1"></li>
-    <li data-target="#carousel-example-2" data-slide-to="2"></li>
-  </ol>
-  <!--/.Indicators-->
-  <!--Slides-->
-  <div class="carousel-inner" role="listbox">
-    <div class="carousel-item active">
-      <div class="view">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(68).jpg"
-          alt="First slide">
-        <div class="mask rgba-black-light"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Light mask</h3>
-        <p>First text</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <!--Mask color-->
-      <div class="view">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(6).jpg"
-          alt="Second slide">
-        <div class="mask rgba-black-strong"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Strong mask</h3>
-        <p>Secondary text</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <!--Mask color-->
-      <div class="view">
-        <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Slides/img%20(9).jpg"
-          alt="Third slide">
-        <div class="mask rgba-black-slight"></div>
-      </div>
-      <div class="carousel-caption">
-        <h3 class="h3-responsive">Slight mask</h3>
-        <p>Third text</p>
-      </div>
-    </div>
-  </div>
-  <!--/.Slides-->
-  <!--Controls-->
-  <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  <!--/.Controls-->
-</div>
-<!--/.Carousel Wrapper-->
-</section>
-<!--FIN DE LA SECTION CAROUSEL-->
+<!--FIN NAV BARRE-->
+    <!-- Material form register -->
 <section>
+    <div class="container " id="registerSection">
+       <div class="card">
 
+    <h5 class="card-header info-color white-text text-center py-4">
+        <strong>Sign up</strong>
+    </h5>
+
+    <!--Card content-->
+    <div class="card-body px-lg-5 pt-0">
+
+        <!-- Form -->
+        <small  class="form-text text-muted mb-4" style="color: #ff645d">
+                      {{error}}
+        </small>
+
+        <form class="text-center" style="color: #757575;" action="{% url 'myRegister' %}" method="post">
+            {% csrf_token%}
+
+            <div class="form-row">
+                <div class="col">
+                    <!-- First name -->
+                    <div class="md-form">
+                        <input type="text" id="Fname" name="Fname" class="form-control" value="{{Fname}}">
+                        <label for="Fname">First name</label>
+                    </div>
+                </div>
+                <div class="col">
+                    <!-- Last name -->
+                    <div class="md-form">
+                        <input type="text" id="Lname" name="Lname" class="form-control" value="{{Lname}}">
+                        <label for="Lname">Last name</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- E-mail -->
+            <div class="md-form mt-0">
+                <input type="email" id="Mail" name="Email" class="form-control" value="{{Email}}">
+                <label for="Mail">E-mail</label>
+            </div>
+
+            <!-- Password -->
+            <div class="form-row">
+                <div class="md-form col">
+                    <input type="password" id="Pass" name="Pass" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
+                    <label for="Pass">Password</label>
+                    <small id="" class="form-text text-muted mb-4">
+                        At least 8 characters and 1 digit
+                    </small>
+                </div>
+                <div class="md-form col">
+                    <input type="password" id="PassConf" name="PassConf" class="form-control" aria-describedby="materialRegisterFormPasswordHelpBlock">
+                    <label for="PassConf">Confirm Password</label>
+                </div>
+            </div>
+            <!-- Phone number -->
+            <div class="md-form">
+                <input type="number" id="num" name="num" class="form-control" value="{{Phone}}" aria-describedby="materialRegisterFormPhoneHelpBlock">
+                <label for="num">Phone number</label>
+                <small id="materialRegisterFormPhoneHelpBlock" class="form-text text-muted mb-4">
+                    Optional - for two step authentication
+                </small>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="materialRegisterFormNewsletter">
+                <label class="form-check-label" for="materialRegisterFormNewsletter">Subscribe to our newsletter</label>
+            </div>
+
+            <!-- Sign up button -->
+            <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign in</button>
+
+            <!-- Social register -->
+            <p>or sign up with:</p>
+
+            <a type="button" class="btn-floating btn-fb btn-sm">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a type="button" class="btn-floating btn-tw btn-sm">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a type="button" class="btn-floating btn-li btn-sm">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a type="button" class="btn-floating btn-git btn-sm">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <hr>
+
+            <!-- Terms of service -->
+            <p>By clicking
+                <em>Sign up</em> you agree to our
+                <a href="" target="_blank">terms of service</a>
+
+        </form>
+        <!-- Form -->
+
+    </div>
+
+</div>
+
+    </div>
 </section>
+<!-- Material form register -->
 
 </body>
 <!--SECTION SCRIPT-->
@@ -203,4 +243,5 @@
 
         <!--FIN SECTION SCRIPT -->
 
+</html>
 </html>
