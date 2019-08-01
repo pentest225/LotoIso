@@ -1,0 +1,84 @@
+{% extends "base/BaseParie.html "%}
+
+<!--SECTION CAROUEL -->
+{% block content %}
+<h4 class="myH4">Maths du Jours </h4>
+<h5 class="myH5">On parie que vous allez gagner ;-)</h5>
+<div class="container matnInfo">
+    <div class="sectionHeure">
+     <p> Heure de debut : {{mathInfo.heure_debut}}</p>
+     <p></p>
+    </div>
+    <div class="row">
+        <div class="col-md">
+            {{mathInfo.idEquipe1}}
+        </div>
+        <div class="col-md">
+            {{mathInfo.scoreEq1}}-{{mathInfo.scoreEq2}}
+        </div>
+        <div class="col-md">
+            {{mathInfo.idEquipe2}}
+        </div>
+
+    </div>
+    <div>
+        <button class="btn myBtn" data-toggle="modal" data-target="#fullHeightModalRight"> parier </button>
+    </div>
+
+</div>
+
+<!--SECTION MODAL  -->
+<!-- Full Height Modal Right -->
+<div class="modal fade right " id="fullHeightModalRight" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+
+  <!-- Add class .modal-full-height and then add class .modal-right (or other classes from list above) to set a position to the modal -->
+  <div class="modal-dialog modal-full-height modal-right" role="document">
+
+
+    <div class="modal-content myModal">
+      <div class="modal-header">
+        <h4 class="modal-title w-100" id="myModalLabel">On parie que vous allez gagner ;-)</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            <div class="container myFormDiv">
+                <form>
+                    <div>
+                       <select class="browser-default custom-select mySelect">
+                          <option selected>Selection ton Equpe Gagnante </option>
+                          <option value='1'>{{mathInfo.idEquipe1}}</option>
+                           <option value='2'>{{mathInfo.idEquipe2}}</option>
+                        </select>
+                    </div>
+                    <div >
+                        <!-- Material input -->
+                        <div class="md-form">
+                          <input type="number" id="form1" class="form-control">
+                          <label for="form1">Mise </label>
+                        </div>
+                    </div>
+                    <div >
+                        <!-- Material input -->
+                        <div class="md-form">
+                          <input type="number" id="form1" class="form-control" disabled="">
+                          <label for="form1">Gaim Victoir </label>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+
+                </form>
+            </div>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Full Height Modal Right -->
+<!--FIN DE LA SECTION -->
+{% endblock %}

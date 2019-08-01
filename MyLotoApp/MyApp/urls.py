@@ -24,4 +24,6 @@ urlpatterns = [
     path('login/',views.connexion,name='login'),
     path('myLogin',views.myLogin,name='myLogin'),
     path('myRegister',views.myRegister,name='myRegister'),
+    path('scrap',views.scrap,name='scrap'),
+    path('<int:math_id>/',views.parie,name='parie'),
 ]

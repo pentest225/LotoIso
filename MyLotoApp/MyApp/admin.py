@@ -20,23 +20,23 @@ class EquipeAdmin (admin.ModelAdmin):
     list_display = ('nom' ,'logo','cote',)
     list_filter = ("nom",)
     search_fields = ('nom' ,)
-    list_per_page = 10
+    list_per_page = 500
     ordering = ['nom',]
 
 
 @admin.register(Sport)
 class SportAdmin (admin.ModelAdmin):
-    list_display = ('Nom' ,'logo',)
-    list_filter = ("Nom",)
-    search_fields = ('Nom' ,)
+    list_display = ('nom' ,'logo','date_add',)
+    list_filter = ("nom",'date_add',)
+    search_fields = ('nom' ,'date_add',)
     list_per_page = 10
-    ordering = ['Nom',]
+    ordering = ['nom','date_add',]
 
 
 @admin.register(Math)
 class MathAdmin (admin.ModelAdmin):
-    list_display = ('date_debut' ,'date_fin','idEquipe1','idEquipe2','scoreEq1','scoreEq2')
+    list_display = ('typeSport','date_math' ,'heure_debut','heure_fin','idEquipe1','idEquipe2','scoreEq1','scoreEq2')
     list_filter = ("idEquipe1","idEquipe2",)
     search_fields = ('idEquipe1','idEquipe2',)
-    list_per_page = 50
+    list_per_page = 500
     ordering = ['idEquipe1','idEquipe2',]
