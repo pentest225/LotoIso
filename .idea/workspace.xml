@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bedaaeaf-d30c-4d16-a0c0-18a080a5adc3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/MyLotoApp/MyApp/static/js/parie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MyLotoApp/MyApp/templates/MyApp/compte.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLotoApp/MyApp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyLotoApp/MyApp/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLotoApp/MyApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyLotoApp/MyApp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLotoApp/MyApp/static/css/myStyle.css" beforeDir="false" afterPath="$PROJECT_DIR$/MyLotoApp/MyApp/static/css/myStyle.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLotoApp/MyApp/static/css/parie.css" beforeDir="false" afterPath="$PROJECT_DIR$/MyLotoApp/MyApp/static/css/parie.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLotoApp/MyApp/static/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/MyLotoApp/MyApp/static/js/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLotoApp/MyApp/templates/MyApp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyLotoApp/MyApp/templates/MyApp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLotoApp/MyApp/templates/MyApp/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyLotoApp/MyApp/templates/MyApp/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLotoApp/MyApp/templates/MyApp/parie.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyLotoApp/MyApp/templates/MyApp/parie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLotoApp/MyApp/templates/MyApp/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyLotoApp/MyApp/templates/MyApp/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLotoApp/MyApp/templates/base/BaseParie.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyLotoApp/MyApp/templates/base/BaseParie.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLotoApp/MyApp/templates/base/indexBase.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyLotoApp/MyApp/templates/base/indexBase.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLotoApp/MyApp/templates/base/navBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/MyLotoApp/MyApp/templates/base/navBar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLotoApp/MyApp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyLotoApp/MyApp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MyLotoApp/MyApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyLotoApp/MyApp/views.py" afterDir="false" />
-    </list>
+    <list default="true" id="bedaaeaf-d30c-4d16-a0c0-18a080a5adc3" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +23,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.37003058">
+    <splitter split-orientation="horizontal" split-proportion="0.9">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
@@ -95,8 +77,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/MyLotoApp/MyApp/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="18" column="17" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="17" />
+                <state relative-caret-position="-1822">
+                  <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
                   <folding>
                     <element signature="e#0#36#0" expanded="true" />
                   </folding>
@@ -232,7 +214,6 @@
         <option value="$PROJECT_DIR$/MyLotoApp/MyApp/static/css/parie.css" />
         <option value="$PROJECT_DIR$/MyLotoApp/MyApp/templates/MyApp/parie.html" />
         <option value="$PROJECT_DIR$/MyLotoApp/MyApp/models.py" />
-        <option value="$PROJECT_DIR$/MyLotoApp/MyApp/views.py" />
         <option value="$PROJECT_DIR$/MyLotoApp/MyApp/templates/base/BaseParie.html" />
         <option value="$PROJECT_DIR$/MyLotoApp/MyApp/templates/base/navBar.html" />
         <option value="$PROJECT_DIR$/MyLotoApp/MyApp/templates/base/indexBase.html" />
@@ -242,6 +223,7 @@
         <option value="$PROJECT_DIR$/MyLotoApp/MyApp/static/js/parie.js" />
         <option value="$PROJECT_DIR$/MyLotoApp/MyApp/templates/MyApp/index.html" />
         <option value="$PROJECT_DIR$/MyLotoApp/MyApp/static/css/myStyle.css" />
+        <option value="$PROJECT_DIR$/MyLotoApp/MyApp/views.py" />
       </list>
     </option>
   </component>
@@ -329,18 +311,17 @@
       <workItem from="1564404085231" duration="61074000" />
       <workItem from="1564593437862" duration="31546000" />
       <workItem from="1564662625014" duration="39502000" />
-      <workItem from="1564722972988" duration="26940000" />
+      <workItem from="1564722972988" duration="27592000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213144000" />
+    <option name="totallyTimeSpent" value="213796000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15938303" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15938303" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -354,7 +335,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50064266" side_tool="true" weight="0.95962316" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4993573" visible="true" weight="0.3257066" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.4993573" visible="true" weight="0.3257066" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32974428" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -576,16 +557,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyLotoApp/MyApp/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MyLotoApp/MyApp/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="178">
@@ -602,6 +573,16 @@
           <caret line="3" column="52" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="52" />
           <folding>
             <element signature="n#style#0;n#strong#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyLotoApp/MyApp/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1822">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
           </folding>
         </state>
       </provider>
