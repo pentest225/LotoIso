@@ -40,3 +40,12 @@ class MathAdmin (admin.ModelAdmin):
     search_fields = ('idEquipe1','idEquipe2',)
     list_per_page = 500
     ordering = ['idEquipe1','idEquipe2',]
+
+
+@admin.register(Parier)
+class ParierAdmin (admin.ModelAdmin):
+    list_display = ('idUser','idMath' ,'date_parie','mise','gainParie','idVictoir')
+    list_filter = ("idUser","date_parie","gainParie","idMath",)
+    search_fields = ("idUser","date_parie","gainParie","idMath",)
+    list_per_page = 500
+    ordering = ['date_parie','gainParie',]

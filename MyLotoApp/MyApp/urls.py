@@ -26,4 +26,8 @@ urlpatterns = [
     path('myRegister',views.myRegister,name='myRegister'),
     path('scrap',views.scrap,name='scrap'),
     path('<int:math_id>/',views.parie,name='parie'),
+    path('logout/',views.myLogout,name='logout'),
+    path('compte/',views.compte,name='compte'),
+    path('saveParie',views.saveParie,name='saveParie'),
+    path('AtualisationParie/<int:>',views.AtualisationParie,name='AtualisationParie'),
 ]

@@ -12,7 +12,8 @@ body{
 }
 .matnInfo{
     border: 2px solid #5f71ff;
-    background-image: linear-gradient(to right, blue, #1C172E);
+    border-radius: 15px;
+    background-image: linear-gradient(to right, gray, #1C172E);
     background-color:rgb(16, 23, 160);
     /*height: 150px;*/
     text-align: center;
@@ -21,6 +22,33 @@ body{
     margin: 10px;
 
 }
+.myH3{
+    border-top: 4px solid #4844a6;
+
+    border-bottom: 4px solid #4844a6;
+    padding: 20px;
+    color: #797480;
+    width: 30%;
+    margin-top:10px;
+    margin-left:auto;
+    margin-right: auto;
+
+}
+.myDiv{
+    border-radius: 5%;
+    box-shadow: 5px 3px 3px #4844a6;
+    margin: 10px;
+    padding: 20px;
+
+}
+.myDiv h2{
+    font-weight: bolder;
+    /*font-family: "Bitstream Vera Sans Mono", Monaco, "Courier New", Courier, monospace;*/
+    color: #100dc5;
+    margin: 10px;
+    text-shadow: 8px 3px 3px #4844a6;
+}
+
 #registerSection{
     margin: 8% auto;
     width: 50%;
@@ -29,4 +57,11 @@ body{
 #LoginSection{
     margin: 10% auto;
     width: 400px;
+}
+.sectionHeure{
+    /*margin: 10px;*/
+}
+.sectionHeure{
+    display: flex;
+    justify-content:space-between;
 }

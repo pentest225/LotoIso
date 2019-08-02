@@ -33,7 +33,9 @@
 </head>
 <body>
 <!-- NAV BAR -->
-<main id="wrapper">
+<!-- NAV BAR -->
+<header>
+  <main id="wrapper">
       <!-- navigation -->
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container">
@@ -51,17 +53,26 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-              <a class="nav-link" href="index.php">Home
+              <a class="nav-link" href="{% url 'index' %}">Mathe
                 <span class="sr-only">(current)</span>
               </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="ventePrise.php">Vente et prise</a>
+                <a class="nav-link" href="{% url 'login' %}">Login</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="allUser.php">Mes Client</a>
+                <a class="nav-link" href="{% url 'register' %}">Inscription</a>
               </li>
-              <li class="nav-item dropdown">
+
+              <li class="nav-item">
+                <a
+                  class="nav-link disabled"
+                  href="#"
+                  tabindex="-1"
+                  >Disabled</a
+                >
+              </li>
+                <li class="nav-item dropdown" style="color:#746dff !important;">
                 <a
                   class="nav-link dropdown-toggle"
                   href="#"
@@ -71,29 +82,21 @@
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  Ajouter
+                  <i class="fas fa-sliders-h"></i> {{user}}
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal1" id="comptBoullangerie">Nouvelle Boulangerie</a>
-                  <a class="nav-link" href="#" data-toggle="modal" data-target="#myModal" id="creationCompt" >Nouveaux un client</a>
+                  <a class="nav-link" href="{%url 'compte' %}" ><i class="fas fa-id-badge"></i>Mon compte  <strong style="color: red"><i class="far fa-bell"></i><small>{{user.profile.notif}}</small></strong></a>
+                  <a class="nav-link" href="{%url 'logout' %}"  ><i class="fas fa-sign-out-alt"></i> Deconnexion </a>
                 </div>
               </li>
-              <li class="nav-item">
-                <a
-                  class="nav-link disabled"
-                  href="#"
-                  tabindex="-1"
-                  >Disabled</a
-                >
-              </li>
+
             </ul>
           </div>
         </div>
       </nav>
-<!-- FIN NAV BAR -->
-
-<!-- NAV BAR -->
-<body>
+    <!--SECTION SLADER-->
+    </main>
+  </header>
     {% block content %}
     {% endblock %}
 </body>

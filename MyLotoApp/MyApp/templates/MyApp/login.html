@@ -1,11 +1,11 @@
-{% extends "base/navBar.html "%}
+{% extends "base/BaseParie.html "%}
 {% block content %}
 <section>
     <div class="container" id="LoginSection">
         <div class="card">
 
   <h5 class="card-header info-color white-text text-center py-4">
-    <strong>Sign in</strong>
+    <strong>Connexion</strong>
   </h5>
 
   <!--Card content-->
@@ -48,23 +48,11 @@
 
       <!-- Register -->
       <p>Not a member?
-        <a href="">Register</a>
+        <a href="{% url 'register'%}">Register</a>
       </p>
 
       <!-- Social login -->
-      <p>or sign in with:</p>
-      <a type="button" class="btn-floating btn-fb btn-sm">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a type="button" class="btn-floating btn-tw btn-sm">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a type="button" class="btn-floating btn-li btn-sm">
-        <i class="fab fa-linkedin-in"></i>
-      </a>
-      <a type="button" class="btn-floating btn-git btn-sm">
-        <i class="fab fa-github"></i>
-      </a>
+      
 
     </form>
     <!-- Form -->

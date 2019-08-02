@@ -50,6 +50,16 @@ body{
     text-align: center;
     color: white;
 }
+#registerSection{
+    margin: 8% auto;
+    width: 50%;
+
+}
+#LoginSection{
+    margin: 10% auto;
+    width: 400px;
+}
+
 .mySelect{
     color: white;
     background: none;
@@ -63,4 +73,12 @@ input{
 }
 .sectionHeure{
     margin: 10px;
+}
+.sectionHeure{
+    display: flex;
+    justify-content: space-around;
+}
+.etatMath{
+    margin-top: 0px;
+    padding: 20px;!important;
 }

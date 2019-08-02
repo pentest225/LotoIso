@@ -6,18 +6,28 @@
 <h5 class="myH5">On parie que vous allez gagner ;-)</h5>
 <div class="container matnInfo">
     <div class="sectionHeure">
-     <p> Heure de debut : {{mathInfo.heure_debut}}</p>
-     <p></p>
+     <p><i class="far fa-clock"></i> <strong>{{mathInfo.heure_debut}}</strong></p>
+        <p>
+            <span class="etatMath"></span>
+        </p>
+     <p>
+         <i class="fas fa-stopwatch"></i>
+         <span class="myChrono">
+             <strong class="myHeure"></strong>-<strong class="myMin"></strong>-<strong class="mySec"></strong>
+         </span>
+     </p>
     </div>
     <div class="row">
         <div class="col-md">
-            {{mathInfo.idEquipe1}}
+            <p>{{mathInfo.idEquipe1}}</p>
+            <p>v1 <strong id="cote1">{{mathInfo.idEquipe1.cote|floatformat:2}}</strong></p>
         </div>
         <div class="col-md">
             {{mathInfo.scoreEq1}}-{{mathInfo.scoreEq2}}
         </div>
         <div class="col-md">
-            {{mathInfo.idEquipe2}}
+            <p>{{mathInfo.idEquipe2}}</p>
+            <p >v2:<strong id="cote2">{{mathInfo.idEquipe2.cote|floatformat:2}}</strong></p>
         </div>
 
     </div>
@@ -45,10 +55,11 @@
       </div>
       <div class="modal-body">
             <div class="container myFormDiv">
-                <form>
+                <form method="post" action="{% url 'saveParie' %}">
+                    {% csrf_token %}
                     <div>
-                       <select class="browser-default custom-select mySelect">
-                          <option selected>Selection ton Equpe Gagnante </option>
+                       <select class="browser-default custom-select mySelect" id="idVirtoir" name="idVictoir">
+                          <option selected value="0">Selection ton Equpe Gagnante </option>
                           <option value='1'>{{mathInfo.idEquipe1}}</option>
                            <option value='2'>{{mathInfo.idEquipe2}}</option>
                         </select>
@@ -56,18 +67,27 @@
                     <div >
                         <!-- Material input -->
                         <div class="md-form">
-                          <input type="number" id="form1" class="form-control">
-                          <label for="form1">Mise </label>
+                          <input type="number" id="mise" name="mise" class="form-control">
+                          <label for="mise">Mise </label>
                         </div>
                     </div>
-                    <div >
+                    <div>
                         <!-- Material input -->
                         <div class="md-form">
-                          <input type="number" id="form1" class="form-control" disabled="">
-                          <label for="form1">Gaim Victoir </label>
+                          <input type="number" id="gainPotentiel" name="gain" class="form-control" readonly>
+                          <label for="gainPotentiel">Gaim Victoir </label>
                         </div>
                     </div>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <div>
+                        <!-- Material input -->
+                        <div class="md-form">
+                          <input type="hidden" id="idUser" name="idUser" class="form-control"  value="{{user.pk}}">
+                        </div>
+                        <div class="md-form">
+                          <input type="hidden" id="idMath" name="idMath" class="form-control"  value="{{mathInfo.id}}">
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-primary btn-sm" id="submitParie" value="let go" >
 
                 </form>
             </div>
@@ -79,6 +99,15 @@
     </div>
   </div>
 </div>
+<!--<form method="post" style="display: none" action="{% url 'AtualisationParie' %}">-->
+<!--    {% csrf_token %}-->
+<!--        <div>-->
+<!--            <input type="hidden" id="validIdMath" name="idMath" class="form-control"  value="{{mathInfo.id}}">-->
+<!--        </div>-->
+<!--    <input type="submit" class="btn btn-primary btn-sm" id="ActualisationParie" value="let go" >-->
+
+
+<!--</form>-->
 <!-- Full Height Modal Right -->
 <!--FIN DE LA SECTION -->
 {% endblock %}
