@@ -5,19 +5,28 @@
 <section class="team-section " style="color: whitesmoke">
         <!-- Section heading -->
         <h2 class="h1-responsive font-weight-bold   text-center">Mes Parie </h2>
+        {% if isError  %}
+            <div class="alert alert-error alert-dismissible fade show" role="alert">
+              <strong>Erreur  Picket !</strong> {{error}}
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+        {% endif %}
+
         <!-- Section description -->
         <div class="row  text-center">
             <div class="col-lg-3 col-md-4 mb-lg-0 " style="color: #0b2a41">
                 <div class="avatar mx-auto">
                     <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" class="rounded-circle z-depth-1" alt="Sample avatar">
                 </div>
-                <h5 class="font-weight-bold mt-4 mb-3">{{user}}</h5>
+                <h5 class="font-weight-bold mt-4 mb-3" style="color:#0210ff">{{user}}</h5>
                 <p class="text-uppercase blue-text"><strong></strong></p>
                 <ul class="list-group list-group-flush">
-                    <li class="list-group-item"><strong>Prenom :</strong><span>{{user.last_name}}</span></li>
+                    <li class="list-group-item"><strong>Prenom :</strong><span style="color:blue">{{user.last_name}}</span></li>
 
-                    <li class="list-group-item"><strong>Contact :</strong><span>{{user.profile.numero}}</span></li>
-                    <li class="list-group-item"><strong>Solde Actuel:</strong><span>{{user.profile.compte_client}}</span></li>
+                    <li class="list-group-item"><strong>Contact :</strong><span style="color:blue">{{user.profile.numero}}</span></li>
+                    <li class="list-group-item"><strong>Solde Actuel:</strong><span style="color:blue">{{user.profile.compte_client}} frca </span></li>
 
                 </ul>
 
@@ -52,7 +61,7 @@
 
                         </tr>
                     </thead>
-                    <tbody style="color: #c54b50">
+                    <tbody style="color: #5251c5">
                         {% for parie in myAllParie %}
                             <tr>
                                 <td>{{parie.date_parie}}</td>
@@ -61,8 +70,19 @@
                                 <td>{{parie.idVictoir}}</td>
                                 <td>{{parie.mise}}</td>
                                 <td>{{parie.gainParie}}</td>
-                                <td>{{parie.resultat}}</td>
-                                <td><a href="{% url 'parie' parie.idMath.pk %}">voir le Match </a></td>
+                                <td>
+                                    {% if parie.result %}
+                                    <strong style="color: green">
+                                        <i class="far fa-smile-beam"></i>
+                                    </strong>
+                                    {% else %}
+                                    <strong style="color: red">
+                                        <i class="far fa-angry"></i>
+                                    </strong>
+
+                                    {% endif %}
+                                </td>
+                                <td ><a href="{% url 'parie' parie.idMath.pk %}" style="color:#624fff"><i class="fas fa-eye"></i> </a></td>
                             </tr>
                         {% endfor %}
 

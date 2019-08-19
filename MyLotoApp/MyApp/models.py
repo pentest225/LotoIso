@@ -63,6 +63,7 @@ class Parier(models.Model):
     idVictoir=models.IntegerField(null=True,verbose_name='parie pour ')
     date_parie=models.DateTimeField(auto_now_add=True)
     date_up=models.DateTimeField(auto_now=True)
+    mathTerniner=models.BooleanField(default=False)
     gainParie=models.FloatField(null=True)
     resultat=models.BooleanField(default=False)
-
+    status=models.BooleanField(default=False)

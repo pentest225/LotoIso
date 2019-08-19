@@ -29,5 +29,6 @@ urlpatterns = [
     path('logout/',views.myLogout,name='logout'),
     path('compte/',views.compte,name='compte'),
     path('saveParie',views.saveParie,name='saveParie'),
-    path('AtualisationParie/<int:>',views.AtualisationParie,name='AtualisationParie'),
+    path('valideParie/',views.valideParie,name='valideParie'),
+    path('AtualisationParie/',views.AtualisationParie,name='AtualisationParie'),
 ]

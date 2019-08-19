@@ -1,4 +1,6 @@
 $(function(){
+   soldeUser=document.querySelector('#userSolde').innerHTML
+   console.log(soldeUser)
    divTime=document.querySelector('.sectionHeure p strong').innerText.split(":");
    valIdMath=document.querySelector('#idMath').value
    myMin=parseInt(divTime[1]);
@@ -123,20 +125,29 @@ $(function(){
 
       }
    }
+
+   //REQUETTE POUR VALIDE UN TIKET SI LE MATH EST TERMINER
       if(matchFini){
-         console.log("Ajax")
+         alert('Math termine')
+         myParieBtn.addEventListener('click',function (e) {
+            e.preventDefault()
+            myErrorAlert("Desole le Mathe est termine")
+
+         })
+
          $.ajax({
 					url:"http://127.0.0.1:8000/",
-					type:"GET",
+					type:"POST",
 					data:{idMatch:valIdMath},
 					dataType:"json",
 					success:function(data)
 					{
                         console.log(data)
+                        console.log("requete ok ")
 					}
 				})
       }
-
+//
    // ENREGISTREMENT PARIE
       cote1=document.querySelector('#cote1').innerText
       cote1=cote1.replace(',','.')
@@ -157,13 +168,23 @@ $(function(){
          idVirtoir=document.querySelector("#idVirtoir").value
          mise=document.querySelector("#mise").value
          gainPotentiel=document.querySelector("#gainPotentiel")
-
+         console.log(mise)
+         console.log(soldeUser)
          if(inputidVirtoir.value == 0){
-            alert('selectionne votre equipe')
+            myErrorAlert("selectionne votre equipe")
+            myParieBtn.disable=false
 
          }
          else if(isNaN(mise)){
-            alert('Saisir des chifres svp')
+            text='Saisir des chifres svp'
+            myErrorAlert(text)
+         }
+
+         else if(soldeUser < mise){
+            text="desole solde insufisant ;("
+            myErrorAlert(text)
+            myParieBtn.disable=false
+
          }
          else{
             if(inputidVirtoir.value == 1){
@@ -176,9 +197,37 @@ $(function(){
                inputGainPotentiel.value=gain
             }
          }
-
       })
+})
 
+   function mySuccessAlert() {
+      const Toast = Swal.mixin({
+           toast: true,
+           position: 'top-end',
+           showConfirmButton: false,
+           timer: 3000
+         });
+
+         Toast.fire({
+           type: 'success',
+           title: text
+         })
+   }
+
+      function myErrorAlert(text) {
+         const Toast = Swal.mixin({
+           toast: true,
+           position: 'top-end',
+           showConfirmButton: false,
+           timer: 3000
+         });
+
+         Toast.fire({
+           type: 'error',
+           title: text
+         })
+
+      }
       // myParieBtn.addEventListener('click',function (e) {
       //    e.preventDefault()
       //    idUser=document.querySelector('#idUser').value
@@ -198,4 +247,4 @@ $(function(){
 		// 			}
 		// 		})
       // })
-})
+
